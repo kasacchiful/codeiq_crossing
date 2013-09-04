@@ -1,6 +1,4 @@
 
-require 'pp'
-
 start_time = Time.now
 @count = 0
 
@@ -50,7 +48,6 @@ end
 
 #fname = "./sample.txt"
 fname = "./crossing.txt"
-sorted = nil
 
 a = []
 File.open(fname, "r") do |f|
@@ -58,12 +55,8 @@ File.open(fname, "r") do |f|
     a << line.chomp.to_i
   end
 
-#  pp (merge_sort a)
-#  sorted = merge_sort a
   merge_sort a
   pp @count
 end
 
 puts Time.now - start_time
-
-#puts "#{sorted[0]}, #{sorted[1]}, #{sorted[2]}, ... , #{sorted[-2]}, #{sorted[-1]}"

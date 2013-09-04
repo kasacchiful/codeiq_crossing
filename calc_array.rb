@@ -1,18 +1,7 @@
 
-#require "ruby-prof"
-
 start_time = Time.now
 
 ## binary search
-#class Array
-#  def binarysearch(key, left = 0, right = self.length - 1)
-#     return nil if left > right
-#     mid = (left + right) / 2
-#     key < self[mid] ? (right = mid - 1) : (left = mid + 1)
-#     key == self[mid] ? mid : binarysearch(key, left, right)
-#   end
-# end
-
 def bsearch(ary, key, left, right)
   return nil if left > right
   mid = (left + right) / 2
@@ -23,8 +12,6 @@ end
 ## read file.
 # fname = "./sample.txt"
  fname = "./crossing.txt"
-#fname = "./test.txt"
-#c = 0
 
 File.open(fname, "r") do |f|
   j = f.read.count("\n")
